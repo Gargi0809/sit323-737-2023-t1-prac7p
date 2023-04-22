@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.26.0 (40646f47)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: restaurantservice
+  name: restaurantservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: restaurantservice
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.26.0 (40646f47)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: restaurantservice
+    spec:
+      containers:
+        - image: gargi08092000/restaurantimage
+          livenessProbe:
+            exec:
+              command:
+                - curl --fail http://localhost:3020|| exit 0
+            failureThreshold: 5
+            periodSeconds: 30
+            timeoutSeconds: 10
+          name: restaurantservice
+          ports:
+            - containerPort: 3020
+          resources: {}
+      restartPolicy: Always
+status: {}

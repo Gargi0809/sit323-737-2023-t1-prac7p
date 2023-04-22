@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  restaurantservice:
+    image: gargi08092000/restaurantimage
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3020:3020"
+    healthcheck:
+      test: ["CMD-SHELL", "curl --fail http://localhost:3020|| exit 0"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  

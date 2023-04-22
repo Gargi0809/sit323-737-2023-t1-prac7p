@@ -1,0 +1,159 @@
+<link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+/>
+
+<div >
+  <header id="header">
+    <h1>WELCOME TO OREXI</h1>
+    </div>
+  </header>
+  <div class="container"></div>
+  <section id="restaurant">
+    <h2>OAKLEIGH’S FAVOURITE SOUVLAKI SHOP</h2>
+    <p>
+        Oakleigh’s oldest and favorite Souvlaki bar is located at 33 Chester Street, still serves our famous Charcoal grilled gyro and we have now also introduced several more traditional Greek meals like Pasticio and Mousaka.
+        If you’re planning one meal in Oakleigh, it should be the charcoal grilled Orexi souvlaki rolled in warm pita bread, or the one of their generous open plate souvlakia. While you are there make sure you also try our Coffees.</p>
+  </section>
+  <div class="container">
+    <section id="items">
+      <div class="grid">
+        <div class="icon"><i class="fas fa-hamburger"style="font-size:60px;color:#eb880f;text-shadow:2px 2px 4px #000000;"></i></div>
+        <div class="description">
+          <h2>FOOD</h2>
+          <p>
+            Orexi Souvlaki is renowned for the delicious charcoal grilled Souvlaki in warm pita bread as well as their huge open plate souvlaki dishes. 
+            We also prepare daily home made meals including: Moussaka, Pasticcio, and Oven baked lemon potatoes
+          </p>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="icon"><i class="fas fa-coffee" style="font-size:60px;color:#eb880f;text-shadow:2px 2px 4px #000000;"></i></div>
+        <div class="description">
+          <h2>COFFEE</h2>
+          <p>
+            Each morning our shop is frequented by our loyal customers who come in for a Greek coffee, or their favourite coffee.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="aboutUs">
+      <div class="info">
+        <div class="level" >About us:</div>
+        <ul>
+          <li>Address: 33 Chester St Oakleigh VIC 3166</li>
+          <li>Phone: 03 9569 1151</li>
+          <li>
+            Business Hours:
+            <br>
+            Tuesday Closed, Sunday- Thursday 7:00am to 8:00pm
+            <br>
+            Friday - Saturday 7:00am to late</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!--styling webpage now!-->
+
+<style>
+body {
+  background-color: #eeeeee;
+
+  font-family: 'Lato', sans-serif;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+
+  
+}
+
+.grid {
+  display: flex;
+}
+
+header {
+ 
+  top: 0;
+  min-height: 175px;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #eb880f;
+}
+
+@media (max-width: 650px) {
+  nav > ul {
+    flex-direction: column;
+  }
+}
+
+#restaurant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+  margin-top: 50px;
+}
+
+@media (max-width: 650px) {
+  #hero {
+    margin-top: 20px;
+  }
+}
+
+#items {
+  margin-top: 30px;
+}
+
+#items .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 105px;
+  width: 20vw;
+  color:  #eb880f;
+  
+}
+
+#items .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 125px;
+  width: 80vw;
+  padding: 5px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100%);
+  margin: 100px;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
+.info > .level {
+  background-color: #eb880f;
+  color: black;
+  padding: 15px 0;
+  width: 100%;
+  font-weight: 700;
+  
+}
+
+</style>
